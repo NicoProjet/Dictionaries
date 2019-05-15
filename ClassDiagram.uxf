@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>130</y>
+      <w>230</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>_Dictionary_
+--
++ virtual insertAllWords() const
++ virtual insert()
++ operator+=()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>110</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>_List_
+--
+- _first : _Item*
+- _last : _Item**
+- _size : size_t
+--
+added functions only:
+
+
++ operator&lt;&lt;()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>50</y>
+      <w>180</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Struct
+_Item
+--
+- info: T
+- next: _Item*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>150</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Iterator
+_Place_
+--
+- _list : List*
+- _current : _Item**</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>260</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>const_Iterator
+_const_Place_
+--
+- _list : List*
+- _current : _Item*const*
++ getCurrent()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>90</y>
+      <w>100</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;80.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>210</y>
+      <w>130</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=[nested]&lt;-
+
+</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>190</y>
+      <w>90</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>70.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>230</y>
+      <w>300</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>280.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>90</y>
+      <w>210</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>_Trie_
+--
+- _root : Node*
+- _size : size_t
+--
++ printTrie()
++ insertNextWord()
++ insertAllWords()
++ operator&lt;&lt;()
++ operator=()
++ operator=()
++ insert()
++ find()
++ isIn()
++ erase()
++ clearFromLeaf()
++ clear()
++ getLeaf()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1250</x>
+      <y>120</y>
+      <w>210</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>_Node_
+--
++ _data : char
++ _isWord : bool
++ _father : Node*
++ _firstSon : Node*
++ _next : Node*
+--
++ getIsWord()
++ setIsWord()
++ getSon()
++ setNext()
+
++ insertChild()
++ deleteChild()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1170</x>
+      <y>210</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=[nested]&lt;-
+</panel_attributes>
+    <additional_attributes>30.0;20.0;80.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>230</y>
+      <w>280</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>460</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>_DictionaryList_
+--
++ insert()
++ insert()
++ insert()
++ erase()
++ find()
++ isIn()
++ erase()
++ operator=()
++ operator=()
++ insertAllWords()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>250</y>
+      <w>30</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>450</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>_DictionaryTrie_
+--
++ insert()
++ operator=()
++ operator=()
++ insertNextWord()
++ insertAllWords()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>360</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>450</y>
+      <w>210</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>_DictionaryVector_
+--
++ insert()
++ operator&lt;&lt;()
++ operator[]()
++ operator[]()
++ operator=()
++ operator=()
++ size()
++ insert()
++ find()
++ erase()
++ isIn()
++ clear()
++ insertAllWords()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>230</y>
+      <w>30</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+</diagram>
